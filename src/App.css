@@ -1,0 +1,90 @@
+body {
+  background: 100% 10% / 100% no-repeat url("./assets/img/background.jpg");
+}
+
+.quote {
+  width: 50vw;
+  text-align: center;
+  font-family: "Montserrat";
+  font-size: 36px;
+  margin: 0 auto;
+  padding-top: 200px;
+  color: white;
+  text-shadow: 5px 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.quote__display {
+  border: 1px solid rgba(255, 255, 255, 0.609);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.quote__text {
+  margin: 0;
+}
+
+.quote__author {
+  font-size: 30px;
+  text-align: left;
+  margin: 20px 0 10px 20px;
+}
+
+.quote__button {
+  font-size: 24px;
+  margin-top: 30px;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+.quote__button:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  color: rgb(0, 0, 0);
+}
+
+@media (max-width: 1439px) {
+  body {
+    background: 100% 10% / 130% no-repeat url("./assets/img/background.jpg");
+  }
+}
+
+@media (max-width: 1024px) {
+  body {
+    background: 100% 10% / 180% no-repeat url("./assets/img/background.jpg");
+  }
+  .quote {
+    padding-top: 120px;
+    width: 90vw;
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    background: 100% 0% / 300% no-repeat url("./assets/img/background.jpg");
+  }
+}
+
+@media (max-width: 424px) {
+  body {
+    background: 100% 0% / 400% no-repeat url("./assets/img/background.jpg");
+  }
+  .quote {
+    font-size: 24px;
+  }
+  .quote__author {
+    font-size: 20px;
+  }
+  .quote__display {
+    padding: 10px;
+  }
+  .quote__button {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 22px;  
+  }
+}
