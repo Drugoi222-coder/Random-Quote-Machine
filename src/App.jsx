@@ -13,20 +13,20 @@ function App() {
     author: "",
   });
 
-  const getQuoteData = url => {
-    try {
-      fetchJsonp(url, {
-        jsonpCallback: "jsonp",
-      }).then(response => response.json())
-      .then(response => {
+  const getQuoteData = (url) => {
+    fetchJsonp(url, {
+      jsonpCallback: "jsonp",
+    })
+      .then((response) => response.json())
+      .then((response) => {
         setQuoteData(() => ({
           text: response.quoteText,
-          author: response.quoteAuthor ? response.quoteAuthor : "Неизвестный автор",
+          author: response.quoteAuthor
+            ? response.quoteAuthor
+            : "Неизвестный автор",
         }));
-      });
-    } catch (e) {
-      console.error(e);
-    }
+      })
+      .catch((error) => console.error(error));
   };
 
   useEffect(() => {
@@ -40,7 +40,9 @@ function App() {
           <p className="quote__text">{quoteData.text}</p>
           <p className="quote__author">{quoteData.author}</p>
         </div>
-        <button className="quote__button" onClick={() => getQuoteData(API_URL)}>Новая цитата</button>
+        <button className="quote__button" onClick={() => getQuoteData(API_URL)}>
+          Новая цитата
+        </button>
       </div>
     </>
   );
